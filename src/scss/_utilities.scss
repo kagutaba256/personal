@@ -1,0 +1,135 @@
+.container {
+  overflow: hidden;
+  padding: 0 2rem;
+  margin: 0 1rem;
+}
+
+/* Padding */
+.p {
+  padding: 0.5rem;
+  &-1 {
+    padding: 1rem;
+  }
+  &-2 {
+    padding: 2rem;
+  }
+  &-3 {
+    padding: 3rem;
+  }
+}
+.py {
+  padding: 0.5rem 0;
+}
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+
+/* Margin */
+.m {
+  margin: 0.5rem;
+}
+.m-1 {
+  margin: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my {
+  margin: 0.5rem 0;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: $primary-color;
+  color: $dark-color-dark;
+  padding: 0.4rem 1.3rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  transition: opacity 0.1s ease-in;
+  outline: none;
+  &:hover {
+    opacity: 0.9;
+  }
+  &-dark {
+    background: $dark-color-dark;
+    color: white;
+  }
+  &-grey {
+    background: $grey-color-dark;
+    color: white;
+  }
+}
+
+/* Spinner */
+.spinner {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+/* Lead */
+.lead {
+  font-weight: 200;
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+/* Title */
+.title {
+  font-weight: 200;
+  font-size: 3.4rem;
+  margin-bottom: 1.3rem;
+  border-bottom: 1px solid $lightgrey-color-dark;
+}
+
+.monospace {
+  font-family: $monospace-font;
+  font-size: 0.9rem;
+}
+
+.caption {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.screenshot {
+  width: 80%;
+  margin: 1rem 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line {
+  border-bottom: 1px solid $lightgrey-color-dark;
+  margin: 1rem 0;
+}
+
+.back-button {
+  &:hover {
+    transform: translateX(-0.2rem);
+    color: $primary-color;
+    transition: transform 0.1s ease-in, color 0.1s ease-in;
+  }
+}

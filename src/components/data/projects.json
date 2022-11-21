@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "title": "Ruperf - Linux Perf, Implemented in Rust",
+      "description": "Ruperf is an implementation of the Linux tool \"perf stat\", implemented in Rust. Just like the original, it provides various performance statistics about a process through both a command-line interface and a GUI.",
+      "link": "google.com",
+      "picture": "/assets/projects/ruperf/ruperf-thumbnail.png",
+      "slug": "ruperf"
+    },
+    {
+      "title": "Perception - EIA-608 Captions Maker",
+      "description": "This is a program that makes EIA-608 compliant captions from given user input. This was my senior capstone group project for my Portland State University undergrad program. ",
+      "link": "google.com",
+      "picture": "/assets/projects/perception/perception-thumbnail.png",
+      "slug": "perception"
+    }
+  ]
+}
