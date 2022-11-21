@@ -60,7 +60,7 @@ function Perception() {
             EIA-608 captions, which was then used to test their software.
             Development followed a two-week Agile sprint cycle, with each sprint
             culminating in a demo for the sponsors. The project was completed in
-            December, 2019.
+            December 2019.
           </p>
           <br />
 
