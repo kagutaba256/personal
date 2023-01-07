@@ -97,7 +97,44 @@ function Ruperf() {
 
           <h3 id="project-architecture">Project Architecture</h3>
           <p>
+            Ruperf is a command-line utility that can be used to profile a
+            program, and is similar to the Linux utility{' '}
+            <span className='monospace'>perf</span>. The program is written in
+            Rust, and uses a bindgen wrapper around the Linux kernel's{' '}
+            <span className='monospace'>perf_event_open</span> system call to
+            collect performance statistics. Ruperf is able to collect
+            a variety of statistics about a program, including the number of CPU
+            cycles, instructions, cache reads and writes, cache misses, and context
+            switches.
+          </p>
+          <p>
+            The program is split into three different subcommands: <span className='monospace'>stat</span>,{' '}
+            which collects statistics about a program, <span className='monospace'>test</span>, which
+            runs test to help configure the environment for running{' '} <span className='monospace'>stat</span>, and{' '}
+            <span className='monospace'>gui</span>, which provides a simple GUI for the program.
+          </p>
+          <br />
 
+          <h3 id='my-role'>My Role</h3>
+          <p>
+            At the beginning of the project, I wrote a small program in C that used{' '}
+            <span className='monospace'>perf_event_open</span> to collect statistics about a program,
+            familiarized myself with the data passed back and how we could eventually use it in our
+            Rust version of <span className='monospace'>perf</span>. I also wrote a small program in Rust
+            to familiarize myself with the basics of the StructOpt crate, which we used to parse
+            command line arguments.
+          </p>
+          <p>
+            Ultimately, I was responsible for the <span className='monospace'>test</span> subcommand, which
+            runs a series of tests to help configure the environment for running{' '}
+            <span className='monospace'>stat</span>. These tests include checking if the
+            kernel flag <span className='monospace'>perf_event_paranoid</span> is set to a value
+            that allows us to use <span className='monospace'>perf_event_open</span>, checking for
+            the presence of certain libraires on the machine, and checking if running some provided
+            programs correctly produce performance statistics on the machine.
+            My goal for <span className='monospace'>test</span> was to make adding tests
+            in the future easy and straightforward, so I structured the tests in a way that
+            would be easy to understand.
           </p>
         </div>
       </div>
