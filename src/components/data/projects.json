@@ -13,6 +13,13 @@
       "link": "google.com",
       "picture": "/assets/projects/perception/perception-thumbnail.png",
       "slug": "perception"
+    },
+    {
+      "title": "Street Fighter DQN",
+      "description": "A Deep Q-Network that plays Street Fighter III: 3rd Strike. It can beat easy difficulty computer components by spamming moves. This was my final project for my Deep Reinforcement Learning class at Portland State University.",
+      "link": "google.com",
+      "picture": "/assets/projects/street-fighter-dqn/street-fighter-dqn-thumbnail.png",
+      "slug": "street-fighter-dqn"
     }
   ]
 }
