@@ -11,6 +11,9 @@ import NotFound from './components/pages/core/NotFound'
 import Perception from './components/pages/projects/Perception'
 import Ruperf from './components/pages/projects/Ruperf'
 
+// Stuff
+import UnityReactionSpeedTest from './components/pages/projects/UnityReactionSpeedTest'
+
 function App() {
   return (
     <div>
@@ -23,6 +26,11 @@ function App() {
           {/* Projects */}
           <Route path='/projects/perception' element={<Perception />} />
           <Route path='/projects/ruperf' element={<Ruperf />} />
+          {/* Stuff */}
+          <Route
+            path='/projects/unity-reaction-speed-test'
+            element={<UnityReactionSpeedTest />}
+          />
           {/* 404 */}
           <Route path='*' element={<NotFound />} />
         </Routes>
