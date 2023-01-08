@@ -63,7 +63,7 @@ function Home() {
         </div>
         <div className='footer-text'>
           <p>
-            Copyright <span className='copy'>&copy;</span> 2022 Sam Little
+            Copyright <span className='copy'>&copy;</span> 2023 Sam Little
           </p>
         </div>
       </div>

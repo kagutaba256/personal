@@ -62,7 +62,7 @@ function Sidebar() {
       </div>
       <div className='sidebar-footer'>
         <p>
-          Copyright <span className='copy'>&copy;</span> 2022 Sam Little
+          Copyright <span className='copy'>&copy;</span> 2023 Sam Little
         </p>
       </div>
     </nav>

@@ -342,6 +342,8 @@ p {
       }
       p {
         text-overflow: ellipsis;
+        overflow: hidden;
+        word-wrap: break-word;
       }
     }
     &:hover {
@@ -362,6 +364,9 @@ p {
       li {
         a {
           font-size: 0.77rem;
+        }
+        .btn {
+          border-radius: 3px;
         }
         .github a {
           color: white;

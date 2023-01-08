@@ -13,7 +13,10 @@ function UnityReactionSpeedTest() {
         </div>
         <div className='project'>
           <h1>Unity Reaction Speed Tester</h1>
-          <h2>A free reaction speed testing program with less added delay than the HumanBenchmark one</h2>
+          <h2>
+            A free reaction speed testing program with less added delay than the
+            HumanBenchmark one
+          </h2>
           <h3>September 2021</h3>
           <div className='links'>
             <ul>
@@ -62,22 +65,26 @@ function UnityReactionSpeedTest() {
 
           <h3 id='about'>About The Project</h3>
           <p>
-            Before I made this program, I would frequently use this reaction speed test: {' '}
+            Before I made this program, I would frequently use this reaction
+            speed test:{' '}
             <a
               href='https://humanbenchmark.com/tests/reactiontime'
               target='_blank'
               rel='noopener noreferrer'
+              style={{ textDecoration: 'underline' }}
             >
               HumanBenchmark
             </a>
-            , to test my reaction speed. However, I couldn't help but wonder if there was a
-            significant delay caused by the website having to process all the browser stuff, display
-            to the screen, etc. I had just been learning some Unity tutorials and figured that using
-            a game engine would probably be a lot more responsive. I quickly wrote up
-            a copy of the app in Unity. I was surprised to find that the clone I made actually
-            was consistently around 20ms more responsive than the original! I then packged it up into a standalone
-            executable and released it on GitHub, and now I use this one whenever I feel particularly
-            sluggish and want a confidence boost, lol.
+            , to test my reaction speed. However, I couldn't help but wonder if
+            there was a significant delay caused by the website having to
+            process all the browser stuff, display to the screen, etc. I had
+            just been learning some Unity tutorials and figured that using a
+            game engine would probably be a lot more responsive. I quickly wrote
+            up a copy of the app in Unity. I was surprised to find that the
+            clone I made actually was consistently around 20ms more responsive
+            than the original! I then packged it up into a standalone executable
+            and released it on GitHub, and now I use this one whenever I feel
+            particularly sluggish and want a confidence boost, lol.
           </p>
         </div>
       </div>

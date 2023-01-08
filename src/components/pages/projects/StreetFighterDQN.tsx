@@ -75,7 +75,7 @@ function StreetFighterDQN() {
             This was my final project for my Deep Reinforcement Learning class
             at Portland State University in Spring, 2022. The task was to train
             a Deep Q Learning neural network to play a game of our choice in the
-            style of the DeepMind Atari paper. I chose to use a non-standard
+            style of the DeepMind Atari paper. I chose to use an 
             OpenAI Gym environment called{' '}
             <a
               href='https://diambra.ai/'
@@ -98,11 +98,58 @@ function StreetFighterDQN() {
           <br />
 
           <h3 id='about-diambra-arena'>About Diambra Arena</h3>
-          <p></p>
+          <p>
+            <a
+              href='https://diambra.ai/'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ textDecoration: 'underline' }}
+            >
+              Diambra Arena
+            </a>{' '}
+            is an OpenAI Gym environment that emulates a variety of fighting
+            games using the free and open source arcade emulator <a
+              href='https://www.mamedev.org/'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ textDecoration: 'underline' }}
+            >
+              MAME
+            </a>. Many fighting games, such as Street Fighter III: 3rd Strike,
+            Tekken Tag Tournament, Ultimate Mortal Kombat 3, and others, are packaged
+            in the OpenAI Gym environment. Each step, the environment provides an observation
+            or state of the game, a reward, and some metadata. These can then be fed to the 
+            reinforcement learning agent.
+          </p>
+          <p>
+            The environment doesn't provide any machine learning algorithms, so the reinforcement
+            learning agent was provided by me. Because emulation is a very slow process, the training
+            was bottlenecked by the slow speed of the emulator. However, with a lot of training,
+            I was still able to use the environment to get some cool results.
+          </p>
           <br />
 
           <h3 id='project-architecture'>Project Architecture</h3>
-          <p></p>
+          <p>
+            Deep Q-Networks all require three things at each step: the current state of the environment,
+            the reward recieved for the current step, and finally the action to perform for the current
+            step, which is calculated by the neural network. Diambra Arena provides through the OpenAI
+            Gym the state and the reward, and the network determines the action.
+          </p>
+          <p>
+            Although the observation object provided by Diambra allowed for a few different things to be
+            used as the state, for this project I decided to adhere most closely to the DeepMind Atari paper's
+            approach and use a scaled 224x384 image of the screen as the state, with a convolutional network
+            calculating actions. The actions that were then put back into the environment were a combination
+            of the 4 buttons and direction of the joystick on the arcade cabinet.
+          </p>
+          <p>
+            The reward provided by Diambra Arena was very good out of the box, and was provided as the
+            result of a calculation that was based on the player's health vs enemy health-- basically,
+            the more health the agent had vs the health of the component, the bigger the reward. The idea
+            of this was to incentivize the agent to keep its health high while decreasing the enemy's health.
+            Actually winning the game wasn't included in the reward calculation.
+          </p>
           <br />
         </div>
       </div>
