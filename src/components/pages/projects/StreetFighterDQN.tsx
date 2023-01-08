@@ -151,6 +151,24 @@ function StreetFighterDQN() {
             Actually winning the game wasn't included in the reward calculation.
           </p>
           <br />
+
+          <h3 id='convolutional-neural-network'>About the Convolutional Neural Network</h3>
+          <p>
+            For the convolutional neural network, I used a model that was very similar to the one used in the
+            DeepMind Atari paper. The state image was scaled down to 84x84, and then passed through 3 convolutional
+            layers, then into 2 fully connected layers, and finally into an output layer that calculated the
+            Q values for each of the possible actions. The below image contains the structure of the CNN that had
+            the best results.
+          </p>
+          <img
+            src='/assets/projects/street-fighter-dqn/street-fighter-dqn-cnn.png'
+            alt='CNN Architecture'
+            className='screenshot'
+          />
+          <p className='caption'>
+            The CNN architecture used for the project
+          </p>
+          <br />
         </div>
       </div>
     </Content>
