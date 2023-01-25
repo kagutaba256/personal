@@ -47,24 +47,24 @@ const tick = (object: DemoObject, delta: number) => {
   object.position.x = object.position.x + object.velocity.x * delta * 2;
   object.position.y = object.position.y + object.velocity.y * delta * 2;
 
-  if (object.position.y < -10) {
+  if (object.position.y < -20) {
     object.velocity.y = -object.velocity.y * object.restitution;
-    object.position.y = 10;
+    object.position.y = 20;
   }
 
-  if (object.position.x > 10) {
+  if (object.position.x > 20) {
     object.velocity.x = -object.velocity.x * object.restitution;
-    object.position.x = 10;
+    object.position.x = 20;
   }
 
-  if (object.position.y > 10) {
+  if (object.position.y > 20) {
     object.velocity.y = -object.velocity.y * object.restitution;
-    object.position.y = 10;
+    object.position.y = 20;
   }
 
-  if (object.position.x < -10) {
+  if (object.position.x < -20) {
     object.velocity.x = -object.velocity.x * object.restitution;
-    object.position.x = 10;
+    object.position.x = 20;
   }
 
   object.rotation.x += Math.random() * brownianStrength;
@@ -159,10 +159,12 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
     return colorsToChoose[Math.floor(Math.random() * colorsToChoose.length)]
   }
 
+  const scale = 0.75
+
   return (
     <mesh ref={ref} {...props} key={object.position.x} position={[object.position.x, object.position.y, object.position.z]} rotation={[object.rotation.x, object.rotation.y, object.rotation.z]}>
       {/* box */}
-      <boxBufferGeometry args={[1, 1, 1]} />
+      <boxBufferGeometry args={[scale, scale, scale]} />
       <meshStandardMaterial color = {randomHexColor()} />
 
     </mesh>

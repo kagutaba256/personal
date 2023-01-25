@@ -5,7 +5,7 @@ import { useFrame, ThreeElements } from '@react-three/fiber'
 import FloatingObject from './FloatingObject'
 
 const Demo = () => {
-  const numberOfObjects = 50
+  const numberOfObjects = 60
   return (
     <>
       <ambientLight intensity={0.5} />
