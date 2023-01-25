@@ -105,24 +105,29 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
     )
   }
 
+  // better random
+  const random = (min: number, max: number) => {
+    return Math.random() * (max - min) + min
+  }
+
   // loadFBX('/assets/models/3d/3d.fbx')
 
   let object: DemoObject = {
     mesh: ref,
     position: {
-      x: Math.random() * 100 - 50,
-      y: Math.random() * 100 + 50,
-      z: Math.random() * 100 - 50,
+      x: random(-10, 10),
+      y: random(-10, 10),
+      z: random(-10, 10),
     },
     rotation: {
-      x: Math.random() * 2 * Math.PI,
-      y: Math.random() * 2 * Math.PI,
-      z: Math.random() * 2 * Math.PI,
+      x: random(0, 2 * Math.PI),
+      y: random(0, 2 * Math.PI),
+      z: random(0, 2 * Math.PI),
     },
     velocity: {
-      x: Math.random() * 10 - 5,
-      y: Math.random() * 10 - 5,
-      z: Math.random() * 10 - 5,
+      x: random(-1, 1),
+      y: random(-1, 1),
+      z: random(-1, 1),
     },
     mass: 1,
     radius: 1,
@@ -132,7 +137,26 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
   useFrame((state, delta) => tick(object, delta))
 
   const randomHexColor = () => {
-    return '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0')
+    // use gruvbox colors
+    const colorsToChoose = [
+      '#cc241d',
+      '#fb4934',
+      '#98971a',
+      '#b8bb26',
+      '#d79921',
+      '#fabd2f',
+      '#458588',
+      '#83a598',
+      '#b16286',
+      '#d3869b',
+      '#689d6a',
+      '#8ec07c',
+      '#d65d0e',
+      '#fe8019',
+      '#076678',
+      '#458588',
+    ]
+    return colorsToChoose[Math.floor(Math.random() * colorsToChoose.length)]
   }
 
   return (
