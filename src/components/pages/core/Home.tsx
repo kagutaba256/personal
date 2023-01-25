@@ -1,10 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Canvas } from '@react-three/fiber'
+
+import Demo from '../../layout/Demo'
 
 function Home() {
   return (
     <>
       <div id='home' className='container'>
+        <div className='sketch'>
+          <Canvas>
+            <Demo />
+          </Canvas>
+        </div>
         <div className='text'>
           <h1 className='title'>Sam Little</h1>
           <h2>Software Development Engineer</h2>
