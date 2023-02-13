@@ -35,7 +35,11 @@ function Sidebar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to='/about' className='selected' draggable='false'>
+            <NavLink
+              to='/about'
+              draggable='false'
+              className={window.location.pathname === '/about' ? 'selected' : ''}
+            >
               About
             </NavLink>
           </li>
@@ -52,8 +56,10 @@ function Sidebar() {
           <li>
             <NavLink
               to='/projects'
-              className='selected'
               draggable='false'
+              className={
+                window.location.pathname === '/projects' ? 'selected' : ''
+              }
             >
               Stuff
             </NavLink>
