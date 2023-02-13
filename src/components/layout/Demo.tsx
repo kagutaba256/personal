@@ -1,7 +1,3 @@
-import React, { useRef, useState } from 'react'
-import * as THREE from 'three'
-import { useFrame, ThreeElements } from '@react-three/fiber'
-
 import FloatingObject from './FloatingObject'
 
 const Demo = () => {
