@@ -45,7 +45,7 @@ function Projects() {
           <ul>{projectItems}</ul>
         </div>
       </div>
-      <div className ='container projects'>
+      <div className='container projects'>
         <h1>Stuff</h1>
         <p>Here is some other stuff</p>
         <div className='projects-list'>

@@ -8,14 +8,12 @@ type Props = {
 function Content(props: Props) {
   return (
     <>
-    <section id="main">
-      <Sidebar />
-      <div id="page">
-        <div id="content">
-          {props.children}
+      <section id='main'>
+        <Sidebar />
+        <div id='page'>
+          <div id='content'>{props.children}</div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   )
 }

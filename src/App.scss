@@ -16,10 +16,9 @@ body {
 }
 
 app {
-  &-dark {
-  }
-  &-light {
-  }
+  &-dark {}
+
+  &-light {}
 }
 
 a {
@@ -83,43 +82,54 @@ p {
   background: $dark-color-dark;
   height: 100vh;
   width: 300px;
+
   .sidebar {
     &-header {
       text-align: center;
+
       //border-bottom: 1px solid $grey-color;
       #logo {
         font-size: 2.2rem;
         color: #fff;
         transition: color 0.3s;
+
         //border-bottom: 1px solid $primary-color;
         &:hover {
           color: $primary-color;
         }
       }
+
       #links {
         padding: 0 2rem;
+
         a {
           font-size: 0.78rem;
           color: $lightgrey-color-dark;
           transition: color 0.1s ease-in;
+
           &:hover {
             color: #fff;
           }
         }
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1rem;
       }
     }
+
     &-body {
       margin-top: 2rem;
+
       li {
         list-style: none;
+
         a {
           display: inline-block;
           padding: 0.5rem 3rem;
           width: 100%;
           transition: color 0.1s ease-in;
+
           i {
             color: $lightgrey-color-dark;
             position: relative;
@@ -127,15 +137,18 @@ p {
             top: -2px;
           }
         }
+
         a:hover {
           color: #efefef;
           background: $grey-color-dark;
         }
       }
+
       .selected {
         text-decoration-line: underline;
       }
     }
+
     &-footer {
       position: absolute;
       bottom: 0;
@@ -158,14 +171,17 @@ p {
   overflow: hidden;
   position: relative;
   margin: 0;
+
   h1 {
     font-size: 5rem;
     // color: $primary-color;
     color: white; // for the time being
   }
+
   h2 {
     font-size: 2rem;
   }
+
   .sketch {
     position: absolute;
     top: 0;
@@ -177,6 +193,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .sketch::after {
     content: '';
     position: absolute;
@@ -186,12 +203,15 @@ p {
     height: 120%;
     background-color: rgba(0, 0, 0, 0.75);
   }
+
   .title {
     border-bottom: none;
     text-align: center;
     padding-top: 35vh;
   }
+
   display: grid;
+
   .links {
     ul {
       display: flex;
@@ -199,18 +219,22 @@ p {
       justify-content: center;
       gap: 1rem;
       padding-top: 2rem;
+
       li {
         list-style-type: none;
+
         .btn {
           background: none;
           //background-color: $background-color-dark;
           color: #fff;
           border-radius: 4px;
           transition: background-color 0.1s ease-in-out;
+
           &:hover {
             background-color: $primary-color;
           }
         }
+
         .external {
           color: $lightgrey-color-dark;
           position: relative;
@@ -220,6 +244,7 @@ p {
       }
     }
   }
+
   .footer-text {
     position: absolute;
     bottom: 0;
@@ -240,27 +265,34 @@ p {
     grid-gap: 2rem;
     //border-bottom: 1px solid $dark-color;
   }
+
   .avatar {
     max-width: 250px;
     border-radius: 50%;
   }
+
   .links {
     padding-top: 0.5rem;
+
     ul {
       display: flex;
       gap: 1rem;
+
       li {
         list-style-type: none;
         transition: color 0.1s ease-in-out;
+
         &:hover {
           color: $primary-color;
         }
       }
     }
   }
+
   .myprojects {
     margin-top: 2rem;
   }
+
   .projects-link {
     text-decoration: underline;
   }
@@ -275,16 +307,19 @@ p {
 /* Resume */
 .resume {
   margin: auto;
+
   &-heading {
     display: flex;
     justify-content: space-between;
   }
+
   &-links {
     margin-top: 3rem;
     margin-right: 1rem;
     bottom: 0;
     right: 0;
   }
+
   &-body {
     margin: auto;
     margin-bottom: 1rem;
@@ -297,6 +332,7 @@ p {
   //min-height: 90vh;
   margin-bottom: 2rem;
   margin-top: 2rem;
+
   p {
     margin-bottom: 1.3rem;
   }
@@ -308,6 +344,7 @@ p {
   bottom: 0;
   width: 100%;
   color: $grey-color-dark;
+
   span {
     margin-top: 0.75rem;
     margin-left: 2rem;
@@ -321,8 +358,10 @@ p {
     list-style-type: none;
   }
 }
+
 .project-preview {
   padding: 0.7rem 0;
+
   .content {
     overflow: hidden;
     background-color: $dark-color-dark;
@@ -330,25 +369,31 @@ p {
     border-radius: 7px;
     transition: transform 0.1s;
     max-height: 10rem;
+
     img {
       width: 10rem;
       height: 10rem;
       border-radius: 7px;
     }
+
     .info {
       padding: 1rem;
+
       h2 {
         margin: 0;
         top: 1rem;
       }
+
       p {
         text-overflow: ellipsis;
         overflow: hidden;
         word-wrap: break-word;
       }
     }
+
     &:hover {
       transform: translateX(0.4rem);
+
       .info h2 {
         text-decoration: underline;
       }
@@ -362,17 +407,21 @@ p {
       list-style: none;
       display: flex;
       gap: 1rem;
+
       li {
         a {
           font-size: 0.77rem;
         }
+
         .btn {
           border-radius: 3px;
         }
+
         .github a {
           color: white;
           background-color: #4078c0;
         }
+
         .youtube a {
           color: white;
           background-color: #ff0000;
@@ -395,12 +444,14 @@ p {
         h2 {
           font-size: 1.2rem;
         }
+
         p {
           font-size: 0.8rem;
         }
       }
     }
   }
+
   .project .links ul li .text {
     display: none;
   }
@@ -411,33 +462,41 @@ p {
     margin: 0.5rem;
     padding: 0.5rem;
   }
+
   #home {
     overflow: hidden;
     position: fixed;
+
     .text {
       padding-top: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       .title {
         padding-top: 0;
         margin-bottom: auto;
         font-size: 3rem;
       }
+
       h2 {
         padding-top: 0;
         font-size: 1.2rem;
       }
+
       h3 {
         font-size: 0.8rem;
       }
     }
+
     .links {
       padding-top: 5rem;
+
       ul {
         flex-direction: column;
         gap: 0.5rem;
+
         li {
           .btn {
             padding: 0.5rem 1rem;
@@ -446,66 +505,81 @@ p {
       }
     }
   }
+
   #main {
     display: flex;
     flex-direction: column;
   }
+
   #sidebar {
     // needs to go on the top now
     flex-direction: row;
     height: 12vh;
     width: 100vw;
+
     .sidebar {
       &-header {
         #logo {
           font-size: 2rem;
         }
+
         #links {
           font-size: smaller;
           display: flex;
         }
       }
+
       &-body {
         position: sticky;
         right: 0;
+
         ul {
           display: flex;
           flex-direction: row;
           gap: 1rem;
+
           li {
             width: 3rem;
             font-size: 0.8rem;
             display: inline-block;
             text-align: center;
+
             a:hover {
               color: #efefef;
               background: none;
             }
+
             a {
               display: inline-block;
               width: 100%;
               padding: 0.2rem;
             }
+
             i {
               display: none;
             }
           }
         }
       }
+
       &-footer {
         display: none;
       }
     }
   }
+
   .projects {
     h1 {
       font-size: 2rem;
     }
+
     margin: 0;
   }
+
   .project-preview {
     .content {
       max-height: 10rem;
+
       img {
         left: 0;
         width: 7rem;
@@ -514,22 +588,27 @@ p {
         border-radius: 3px;
         margin: auto 0;
       }
+
       .info {
         h2 {
           font-size: 0.9rem;
         }
+
         p {
           font-size: 0.8rem;
         }
       }
+
       &:hover {
         transform: none;
+
         .info h2 {
           text-decoration: none;
         }
       }
     }
   }
+
   .project {
     .screenshot {
       width: 100%;
@@ -543,51 +622,64 @@ p {
       .title {
         font-size: 3rem;
       }
+
       h2 {
         font-size: 1.2rem;
       }
+
       h3 {
         font-size: 1rem;
       }
     }
   }
+
   #sidebar {
     overflow: hidden;
+
     .sidebar {
       &-header {
         padding-right: 1rem;
+
         #logo {
           font-size: 1.5rem;
           padding-left: 1rem;
           padding-top: 0.5rem;
         }
+
         #links {
           padding-left: 1rem;
+
           a {
             font-size: 0rem;
           }
+
           i {
             font-size: 1.6rem;
           }
         }
       }
+
       &-body {
         position: sticky;
         right: 0;
+
         ul {
           display: flex;
           flex-direction: row;
           gap: 1rem;
+
           li {
             width: 3rem;
             font-size: 0.8rem;
             display: inline-block;
             text-align: center;
+
             a {
               display: inline-block;
               width: 100%;
               padding: 0.2rem;
             }
+
             i {
               display: none;
             }
@@ -596,17 +688,21 @@ p {
       }
     }
   }
+
   #about {
     overflow: hidden;
+
     header {
       h1 {
         font-size: 2.5rem;
       }
+
       .bio {
         font-size: 1rem;
         width: 80vw;
       }
     }
+
     .avatar {
       display: none;
       width: 0;
@@ -617,42 +713,51 @@ p {
 @media (max-width: 416px) {
   #sidebar {
     height: 10vh;
+
     .sidebar {
       &-header {
         padding-right: 1rem;
+
         #logo {
           font-size: 1rem;
           padding-left: 0.8rem;
           padding-top: 0.6rem;
         }
+
         #links {
           a {
             font-size: 0rem;
           }
+
           i {
             font-size: 1rem;
           }
         }
       }
+
       &-body {
         margin-top: 0.8rem;
         position: sticky;
         right: 0;
+
         ul {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 0.3rem;
           column-gap: 1.2rem;
+
           li {
             width: 3rem;
             font-size: 0.8rem;
             display: inline-block;
             text-align: center;
+
             a {
               display: inline-block;
               width: 100%;
               padding: 0.2rem;
             }
+
             i {
               display: none;
             }
@@ -661,11 +766,13 @@ p {
       }
     }
   }
+
   #about {
     header {
       h1 {
         font-size: 2.5rem;
       }
+
       .avatar {
         display: none;
         width: 0;

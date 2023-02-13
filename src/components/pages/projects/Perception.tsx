@@ -1,15 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Content from '../../layout/Content'
 
 function Perception() {
   return (
     <Content>
       <div className='container' id='perception'>
-        <div className="back-button">
-          <Link to="/projects">
-            <i className="fas fa-arrow-left" />{' '}
-            <span>Back</span>
+        <div className='back-button'>
+          <Link to='/projects'>
+            <i className='fas fa-arrow-left' /> <span>Back</span>
           </Link>
         </div>
         <div className='project'>
@@ -28,9 +27,7 @@ function Perception() {
                     className='btn'
                   >
                     <i className='fab fa-github' />{' '}
-                    <span className="text">
-                      Source Code on GitHub
-                    </span>
+                    <span className='text'>Source Code on GitHub</span>
                   </a>
                 </div>
               </li>

@@ -28,48 +28,64 @@ interface DemoObject {
 const tick = (object: DemoObject, delta: number) => {
   const Cd = 0.47 // Dimensionless
   const rho = 1.22 // kg / m^3
-  const A = Math.PI * object.radius * object.radius// m^2
+  const A = Math.PI * object.radius * object.radius // m^2
   const ag = 0.000001 // m / s^2
   const brownianStrength = 0.0001
 
-  let Fx = -0.5 * Cd * A * rho * object.velocity.x * object.velocity.x * object.velocity.x / Math.abs(object.velocity.x);
-  let Fy = -0.5 * Cd * A * rho * object.velocity.y * object.velocity.y * object.velocity.y / Math.abs(object.velocity.y);
+  let Fx =
+    (-0.5 *
+      Cd *
+      A *
+      rho *
+      object.velocity.x *
+      object.velocity.x *
+      object.velocity.x) /
+    Math.abs(object.velocity.x)
+  let Fy =
+    (-0.5 *
+      Cd *
+      A *
+      rho *
+      object.velocity.y *
+      object.velocity.y *
+      object.velocity.y) /
+    Math.abs(object.velocity.y)
 
-  Fx = isNaN(Fx) ? 0 : Fx;
-  Fy = isNaN(Fy) ? 0 : Fy;
+  Fx = isNaN(Fx) ? 0 : Fx
+  Fy = isNaN(Fy) ? 0 : Fy
 
-  const ax = Fx / object.mass;
-  const ay = ag + Fy / object.mass;
+  const ax = Fx / object.mass
+  const ay = ag + Fy / object.mass
 
-  object.velocity.x = object.velocity.x + ax * delta;
-  object.velocity.y = object.velocity.y + ay * delta;
+  object.velocity.x = object.velocity.x + ax * delta
+  object.velocity.y = object.velocity.y + ay * delta
 
-  object.position.x = object.position.x + object.velocity.x * delta * 2;
-  object.position.y = object.position.y + object.velocity.y * delta * 2;
+  object.position.x = object.position.x + object.velocity.x * delta * 2
+  object.position.y = object.position.y + object.velocity.y * delta * 2
 
   if (object.position.y < -20) {
-    object.velocity.y = -object.velocity.y * object.restitution;
-    object.position.y = 20;
+    object.velocity.y = -object.velocity.y * object.restitution
+    object.position.y = 20
   }
 
   if (object.position.x > 20) {
-    object.velocity.x = -object.velocity.x * object.restitution;
-    object.position.x = 20;
+    object.velocity.x = -object.velocity.x * object.restitution
+    object.position.x = 20
   }
 
   if (object.position.y > 20) {
-    object.velocity.y = -object.velocity.y * object.restitution;
-    object.position.y = 20;
+    object.velocity.y = -object.velocity.y * object.restitution
+    object.position.y = 20
   }
 
   if (object.position.x < -20) {
-    object.velocity.x = -object.velocity.x * object.restitution;
-    object.position.x = 20;
+    object.velocity.x = -object.velocity.x * object.restitution
+    object.position.x = 20
   }
 
-  object.rotation.x += Math.random() * brownianStrength;
-  object.rotation.y += Math.random() * brownianStrength;
-  object.rotation.z += Math.random() * brownianStrength;
+  object.rotation.x += Math.random() * brownianStrength
+  object.rotation.y += Math.random() * brownianStrength
+  object.rotation.z += Math.random() * brownianStrength
 
   // set mesh position
   object.mesh.current.position.x = object.position.x
@@ -79,7 +95,6 @@ const tick = (object: DemoObject, delta: number) => {
   object.mesh.current.rotation.x = object.rotation.x
   object.mesh.current.rotation.y = object.rotation.y
   object.mesh.current.rotation.z = object.rotation.z
-
 }
 
 const FloatingObject = (props: ThreeElements['mesh']) => {
@@ -91,13 +106,13 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
       model,
       (fbx) => {
         fbx.scale.setScalar(0.003 * Math.random() + 0.001)
-        fbx.traverse(c => {
+        fbx.traverse((c) => {
           c.castShadow = true
         })
         ref.current.add(fbx)
       },
       (xhr) => {
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded')
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
       },
       (error) => {
         console.error(error)
@@ -162,14 +177,18 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
   const scale = 0.75
 
   return (
-    <mesh ref={ref} {...props} key={object.position.x} position={[object.position.x, object.position.y, object.position.z]} rotation={[object.rotation.x, object.rotation.y, object.rotation.z]}>
+    <mesh
+      ref={ref}
+      {...props}
+      key={object.position.x}
+      position={[object.position.x, object.position.y, object.position.z]}
+      rotation={[object.rotation.x, object.rotation.y, object.rotation.z]}
+    >
       {/* box */}
       <boxBufferGeometry args={[scale, scale, scale]} />
-      <meshStandardMaterial color = {randomHexColor()} />
-
+      <meshStandardMaterial color={randomHexColor()} />
     </mesh>
   )
 }
 
 export default FloatingObject
-

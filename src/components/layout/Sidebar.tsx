@@ -38,7 +38,9 @@ function Sidebar() {
             <NavLink
               to='/about'
               draggable='false'
-              className={window.location.pathname === '/about' ? 'selected' : ''}
+              className={
+                window.location.pathname === '/about' ? 'selected' : ''
+              }
             >
               About
             </NavLink>
