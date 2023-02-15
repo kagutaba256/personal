@@ -20,6 +20,14 @@
       "link": "google.com",
       "picture": "/assets/projects/street-fighter-dqn/street-fighter-dqn-thumbnail.png",
       "slug": "street-fighter-dqn"
+    },
+    {
+      "title": "My Portfolio Website",
+      "description": "This is the website you're currently on. It's built with React, CSS and all parts were from scratch. The source code is available on GitHub.",
+      "link": "google.com",
+      "picture": "/assets/projects/portfolio-site/portfolio-site-thumbnail.png",
+      "slug": "portfolio-site"
     }
+
   ]
 }

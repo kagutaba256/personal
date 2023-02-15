@@ -11,6 +11,7 @@ import NotFound from './components/pages/core/NotFound'
 import Perception from './components/pages/projects/Perception'
 import Ruperf from './components/pages/projects/Ruperf'
 import StreetFighterDQN from './components/pages/projects/StreetFighterDQN'
+import PortfolioSite from "./components/pages/projects/PortfolioSite";
 
 // Stuff
 import UnityReactionSpeedTest from './components/pages/projects/UnityReactionSpeedTest'
@@ -30,6 +31,10 @@ function App() {
           <Route
             path='/projects/street-fighter-dqn'
             element={<StreetFighterDQN />}
+          />
+          <Route
+              path='/projects/portfolio-site'
+              element={<PortfolioSite />}
           />
           {/* Stuff */}
           <Route
