@@ -1,7 +1,9 @@
 import React, { useRef} from 'react'
 import * as THREE from 'three'
 import { useFrame, ThreeElements } from '@react-three/fiber'
+/*
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
+*/
 
 interface DemoObject {
   mesh: React.MutableRefObject<THREE.Mesh>
@@ -100,6 +102,7 @@ const tick = (object: DemoObject, delta: number) => {
 const FloatingObject = (props: ThreeElements['mesh']) => {
   const ref = useRef<THREE.Mesh>(null!)
 
+/*
   function loadFBX(model: string) {
     const loader = new FBXLoader()
     loader.load(
@@ -119,6 +122,7 @@ const FloatingObject = (props: ThreeElements['mesh']) => {
       }
     )
   }
+*/
 
   // better random
   const random = (min: number, max: number) => {
