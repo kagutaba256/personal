@@ -61,7 +61,17 @@ function PortfolioSite() {
 
                     <h3 id='architecture'>Project Architecture</h3>
                     <p>
-                        asdfasdf
+                        For this site, I started with the sidebar as I had a basic vision of what I wanted the site
+                        to feel like when navigating. I laid out the basic links and then got to work on the CSS, picking
+                        colors and stuff. I used SCSS files and sass to get them to work with React. I also decided from
+                        the start to use TypeScript because I find it a bit easier to write-- the IDE seems to be able to provide
+                        a lot better linting and hints that way.
+                    </p>
+                    <p>
+                        I then started adding the about page, and then the projects listing page. I spent the most time with the CSS,
+                        trying to make everything look nice. I then added a few sample projects. After that, I made the homepage, and
+                        made a really simple 3D physics simulation with floating cubes for the homepage, using three.js to display
+                        the 3D graphics and for the simple box meshes.
                     </p>
                     <br />
 
